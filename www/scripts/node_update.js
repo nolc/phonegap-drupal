@@ -1,7 +1,7 @@
 $('#page_node_update').live('pageshow',function(){
   try {
     $.ajax({
-      url: "http://localhost/drupalGap/?q=my_servicio/node/" + encodeURIComponent(nid) + ".json",
+      url: "http://localhost/phonegapD7/?q=drupalgap/node/" + encodeURIComponent(nid) + ".json",
       type: 'get',
       dataType: 'json',
       error: function (XMLHttpRequest, textStatus, errorThrown) {
@@ -29,7 +29,7 @@ $('#page_node_update_submit').live('click',function(){
   if (!body) { alert('Please enter a body.'); return false; }
 
   $.ajax({
-      url: "http://localhost/drupalGap/?q=my_servicio/node/" + encodeURIComponent(nid) + ".json",
+      url: "http://localhost/phonegapD7/?q=drupalgap/node/" + encodeURIComponent(nid) + ".json",
       type: 'put',
       data: 'node[type]=page&node[title]=' + encodeURIComponent(title) + '&node[language]=und&node[body][und][0][value]=' + encodeURIComponent(body),
       dataType: 'json',

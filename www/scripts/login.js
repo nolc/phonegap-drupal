@@ -6,7 +6,7 @@ $('#page_login_submit').live('click',function(){
 
   // BEGIN: drupal services user login (warning: don't use https if you don't have ssl setup)
   $.ajax({
-      url: "http://localhost/drupalGap/?q=my_servicio/user/login.json",
+      url: "http://localhost/phonegapD7/?q=drupalgap/user/login.json",
       type: 'post',
       data: 'username=' + encodeURIComponent(name) + '&password=' + encodeURIComponent(pass),
       dataType: 'json',

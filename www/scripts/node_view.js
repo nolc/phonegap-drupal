@@ -1,7 +1,7 @@
 $('#page_node_view').live('pageshow',function(){
   try {
     $.ajax({
-      url: "http://localhost/drupalGap/?q=my_servicio/node/" + encodeURIComponent(nid) + ".json",
+      url: "http://localhost/phonegapD7/?q=drupalgap/node/" + encodeURIComponent(nid) + ".json",
       type: 'get',
       dataType: 'json',
       error: function (XMLHttpRequest, textStatus, errorThrown) {
@@ -28,7 +28,7 @@ $('#button_node_delete').live("click",function(){
   if (confirm("Are you sure you want to delete this node?")) {
     try {
       $.ajax({
-        url: "http://localhost/drupalGap/?q=my_servicio/node/" + encodeURIComponent(nid) + ".json",
+        url: "http://localhost/phonegapD7/?q=drupalgap/node/" + encodeURIComponent(nid) + ".json",
         type: 'delete',
         dataType: 'json',
         error: function (XMLHttpRequest, textStatus, errorThrown) {

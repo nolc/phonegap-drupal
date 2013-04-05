@@ -3,7 +3,7 @@ var nid; // global node id variable
 $('#page_dashboard').live('pageshow',function(){
   try {
     $.ajax({
-      url: "http://localhost/drupalGap/?q=my_servicio/system/connect.json",
+      url: "http://localhost/phonegapD7/?q=drupalgap/system/connect.json",
       type: 'post',
       dataType: 'json',
       error: function (XMLHttpRequest, textStatus, errorThrown) {
@@ -22,7 +22,6 @@ $('#page_dashboard').live('pageshow',function(){
           // if user is not logged in...
           $('#button_view_pages').hide(); // hide the view pages
 
-
         }
         else { // user is logged in, hide the login button, show the logout button
           $('#button_login').hide();
@@ -33,6 +32,8 @@ $('#page_dashboard').live('pageshow',function(){
           // if user is logged in...
           $('#button_view_pages').show(); // show the view pages
 
+
+          $('#user').html(drupal_user.name);
 
         }
       }
@@ -50,7 +51,7 @@ $('#page_dashboard').live('pageshow',function(){
 $('#button_logout').live("click",function(){
 try {
  $.ajax({
-     url: "http://localhost/drupalGap/?q=my_servicio/user/logout.json",
+     url: "http://localhost/phonegapD7/?q=drupalgap/user/logout.json",
      type: 'post',
      dataType: 'json',
      error: function (XMLHttpRequest, textStatus, errorThrown) {

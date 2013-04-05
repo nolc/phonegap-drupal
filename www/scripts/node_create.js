@@ -8,7 +8,7 @@ $('#page_node_create_submit').live('click',function(){
 
   // BEGIN: drupal services node create login (warning: don't use https if you don't have ssl setup)
   $.ajax({
-      url: "http://localhost/drupalGap/?q=my_servicio/node.json",
+      url: "http://localhost/phonegapD7/?q=drupalgap/node.json",
       type: 'post',
       data: 'node[type]=page&node[title]=' + encodeURIComponent(title) + '&node[language]=und&node[body][und][0][value]=' + encodeURIComponent(body),
       dataType: 'json',
