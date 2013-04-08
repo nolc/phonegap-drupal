@@ -33,7 +33,7 @@ $('#page_dashboard').live('pageshow',function(){
           $('#button_view_pages').show(); // show the view pages
 
 
-          $('#user').html('hola  ' + drupal_user.name);
+          $('#user').html('hola     ' + drupal_user.name);
 
         }
       }
